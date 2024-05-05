@@ -1,0 +1,12 @@
+{
+  "fullstack-ticket-order-and-scanner-dev-Stack": {
+    "GraphQLAPIID": "xkqbezsbujbktavb4hpkp3zreq",
+    "UserPoolClientId": "2c9nva687i1rpiieid2anodvse",
+    "UserPoolId": "us-east-1_6OEIq6oij",
+    "BucketName": "fullstack-ticket-order-an-ticketorderimagesbucket4-sjusyjwqvlxp",
+    "ticketOrderWebhookURL": "https://iyyckdbseewprnc44wlwjkakiq0hbkbt.lambda-url.us-east-1.on.aws/",
+    "GraphQLAPIURL": "https://lgrc5j2qkbe3rm76o53jz626py.appsync-api.us-east-1.amazonaws.com/graphql",
+    "Region": "us-east-1",
+    "IdentityPoolId": "us-east-1:eeffefbf-2d4f-433d-9ffb-97a0dfac22be"
+  }
+}

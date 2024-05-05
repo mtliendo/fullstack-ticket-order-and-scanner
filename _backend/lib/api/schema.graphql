@@ -1,0 +1,41 @@
+type Query {
+	# An auth user can get a ticket by entering the ID of the ticket
+	getTicketOrder(id: String!): TicketOrder! @aws_cognito_user_pools
+}
+
+type Mutation {
+	# done in the Lambda function
+	createTicketOrder(input: CreateTicketOrderInput!): String!
+		@aws_iam
+		@aws_cognito_user_pools
+	# done in the UI by an auth user
+	updateTicketOrder(input: UpdateTicketOrderInput!): TicketOrder!
+		@aws_cognito_user_pools
+}
+
+input CreateTicketOrderInput {
+	stripeOrderId: String!
+	email: AWSEmail!
+	amountPaidInCents: Int!
+	purchaser: String!
+	buyerPhoneNumber: AWSPhone!
+}
+
+input UpdateTicketOrderInput {
+	id: ID!
+	redeemedBy: String
+	isRedeemed: Boolean!
+}
+
+type TicketOrder {
+	# the id that gets printed on the barcode
+	id: ID!
+	email: AWSEmail!
+	createdAt: AWSDateTime!
+	updatedAt: AWSDateTime!
+	stripeOrderId: String!
+	amountPaidInCents: Int!
+	purchaser: String!
+	redeemedBy: String
+	isRedeemed: Boolean!
+}

@@ -1,0 +1,70 @@
+{
+	"globals": {
+		"appName": "fullstack-ticket-order-and-scanner",
+		"hosting": {
+			"ghTokenName": "github-token",
+			"ghOwner": "focusOtter",
+			"repo": "fullstack-ticket-order-and-scanner"
+		}
+	},
+	"main": {
+		"stage": "prod",
+		"env": {
+			"account": "842537737558",
+			"region": "us-east-1"
+		},
+		"stripe": {
+			"STRIPE_CREDENTIALS_WITH_WEBHOOK_KEY_NAME": "STRIPE_PROD_CREDENTIALS_WITH_WEBHOOK"
+		},
+		"twilio": {
+			"SID": "YOUR_SID",
+			"TWILIO_SECRET_NAME": "twilio",
+			"TWILIO_PHONE_NUMBER": "YOUR_NUMBER"
+		},
+		"sharp": {
+			"sharpLayerArn": "arn:aws:lambda:us-east-1:842537737558:layer:sharp:1",
+			"templateImageKey": "xmas-sample-ticket-hi-res.png",
+			"templateFontKey": "CutiveMono-Regular.ttf"
+		}
+	},
+	"staging": {
+		"stage": "staging",
+		"env": {
+			"account": "123",
+			"region": "us-east-1"
+		},
+		"stripe": {
+			"STRIPE_CREDENTIALS_WITH_WEBHOOK_KEY_NAME": "STRIPE_STAGING_CREDENTIALS_WITH_WEBHOOK"
+		},
+		"twilio": {
+			"SID": "YOUR_SID",
+			"TWILIO_SECRET_NAME": "twilio",
+			"TWILIO_PHONE_NUMBER": "YOUR_NUMBER"
+		},
+		"sharp": {
+			"sharpLayerArn": "arn:aws:lambda:us-east-1:842537737558:layer:sharp:1",
+			"templateImageKey": "xmas-sample-ticket-hi-res.png",
+			"templateFontKey": "CutiveMono-Regular.ttf"
+		}
+	},
+	"develop": {
+		"stage": "dev",
+		"env": {
+			"account": "842537737558",
+			"region": "us-east-1"
+		},
+		"stripe": {
+			"STRIPE_CREDENTIALS_WITH_WEBHOOK_KEY_NAME": "STRIPE_TEST_CREDENTIALS_WITH_WEBHOOK"
+		},
+		"twilio": {
+			"SID": "YOUR_SID",
+			"TWILIO_SECRET_NAME": "twilio",
+			"TWILIO_PHONE_NUMBER": "YOUR_NUMBER"
+		},
+		"sharp": {
+			"sharpLayerArn": "arn:aws:lambda:us-east-1:842537737558:layer:sharp:1",
+			"templateImageKey": "xmas-sample-ticket-hi-res.png",
+			"templateFontKey": "CutiveMono-Regular.ttf"
+		}
+	}
+}
